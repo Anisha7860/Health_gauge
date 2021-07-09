@@ -92,7 +92,7 @@ transition: .4s ease-in-out;
     width: 350px;
     height: 240px;
     float: left;
-    margin: 0px 30px 2px 30px;
+    margin: 0px 50px 0px 50px;
     text-align: center;
     /* border: 1px solid black; */
     border-radius: 0.7vh;
@@ -107,17 +107,9 @@ img{
 }
 
 .text{
-    font-size: 1.5rem;
+    font-size: 2rem;
  color: #151515;
  
 }
 
 
-
- /*@media screen and (max-width:1000px) and (min-width:700px) {
-    div.box-1{
-        margin: 200px 555px 555px 20px;
-      
-    }
-}
-*/
