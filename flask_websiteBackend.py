@@ -15,12 +15,15 @@ work_interferel = ["Don't know", 'Never', 'Often', 'Rarely', 'Sometimes']
 coworkersl =  ['No', 'Some of them', 'Yes'] 
 
 def CheckPositionNumber(string,lists):
+    
     for no,data in enumerate(lists):
-        if string == data:
+
+        if string.lower() == data.lower():
+            print("yessssssss")
             return no
         
 def checkAgeRange(age):
-    '0-20', '21-30', '31-65', '66-100'
+    
     if age >= 0 and age <= 20:
         return 0
     elif age >= 21 and age<=30:
@@ -62,8 +65,11 @@ def MentalHealthpage():
 @app.route('/Recomendations',methods = ["GET","POST"])
 def Recomendation():
     Age = int(request.form['Age'])
-    Gender = CheckPositionNumber(str(request.form['label_Gender']),Genderl)
-    family_history = CheckPositionNumber(str(request.form['label_family_history']),family_historyl)
+    gender = request.form['label_Gender']
+    Gender = CheckPositionNumber(request.form['label_Gender'],Genderl)
+    family_history = CheckPositionNumber(request.form['label_family_history'],family_historyl)
+    fam = request.form['label_family_history']
+    print(fam)
     benefits = CheckPositionNumber(str(request.form['label_benefits']),benefitsl)
     care_options = CheckPositionNumber(str(request.form['label_care_options']),care_optionsl)
     anonymity = CheckPositionNumber(str(request.form['label_anonymity']),anonymityl)
