@@ -33,6 +33,24 @@ def checkAgeRange(age):
     else:
         return 3
 
+def BMIcalculate(weight, height):
+    height = height*0.01
+    height = height*height
+    BMI = weight/height
+    print(BMI)
+    if BMI <= 17:
+        return "Severe Thinnees"
+    elif BMI > 17 and BMI <= 18.5:
+        return "Moderate Thinnes Thinnees"
+    elif BMI > 18.5 and BMI <= 25:
+        return "Normal"
+    elif BMI > 25 and BMI <= 30:
+        return "Overweight"
+    elif BMI > 30 and BMI <= 35:
+        return "Obese class 1"
+    else:
+        return "Obese class 2"
+
 
 @app.route('/HomePage')
 def index():
@@ -42,25 +60,7 @@ def index():
 def MentalHealthpage():
     if (request.method == "GET"):
         return render_template("quizm.html")
-    #elif (request.method == "POST"):
 
-        # Age = int(request.form['Age'])
-        # Gender = CheckPositionNumber(str(request.form['Gender']),Genderl)
-        # family_history = CheckPositionNumber(str(request.form['family_history']),family_historyl)
-        # benefits = CheckPositionNumber(str(request.form['benefits']),benefitsl)
-        # care_options = CheckPositionNumber(str(request.form['care_options']),care_optionsl)
-        # anonymity = CheckPositionNumber(str(request.form['anonymity']),anonymityl)
-        # leave = CheckPositionNumber(str(request.form['leave']),leavel)
-        # work_interfere = CheckPositionNumber(str(request.form['work_interfere']),work_interferel)
-        # coworkers = CheckPositionNumber(str(request.form['coworkers']),coworkersl)
-
-        # age_range = checkAgeRange(Age)
-
-        # model = pickle.load(open('finalized_model', 'rb'))
-        # print("hereeee")
-        # prediction = model.predict([[Age, Gender, family_history, benefits, care_options, anonymity, leave, work_interfere, age_range, coworkers]])
-        # print("fddddddddddddddddddddddddddddddddddddd")
-        # print(prediction)
 
 @app.route('/Recomendations',methods = ["GET","POST"])
 def Recomendation():
@@ -88,15 +88,9 @@ def Recomendation():
     print(prediction)
     return "recomends"
 
-       
-       
-
-
-        
-
 @app.route("/PhysicalHealth")
 def physicalHealthpage():
-    return "waiting"
+    return render_template("physical.html")
 
 if __name__ == "__main__":
     app.run(debug = True)
