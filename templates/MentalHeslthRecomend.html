@@ -27,18 +27,18 @@
 </div>
 
 <div class="hero1">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>{{mental_status}}</p>
 </div>
 
 <div class="hero2">
-    <p>the second line heading</p>
+    <p>{{heading}}</p>
 </div>
 
 <div id="about" style="padding-top:20px">
     <section id="section-two">
        <div class="container">
            <div class="info-box">
-            <a href=" #"> 
+            <a href="{{url_for('MentalHealthBooks')}}"> 
                <img src="../static/images/books.jpeg" alt="image1" />
             </a>
            </div>
@@ -55,7 +55,7 @@
    <section id="section-three">
       <div class="container">
           <div class="info-box">
-            <a href=" #"> 
+            <a href="{{url_for('Meditations')}}"> 
               <img src="../static/images/meditation.png" alt="image2" />
             </a>
           </div>
