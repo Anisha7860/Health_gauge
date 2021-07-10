@@ -1,0 +1,51 @@
+*{   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 10px;
+    font-family: 'Montserrat';
+}
+
+body{
+    width: 100%;
+    background-color: #F7F2F2;
+    background-size:auto;
+    background-repeat: no-repeat;
+}
+
+.nav-link {
+    background-color: #151515;
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 8vh;
+    z-index: 2;
+    }
+    
+    
+    .nav-link a {
+    float: right;
+    color: #f2f2f2;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: .4s ease-in-out;
+    height: 8vh;
+    }
+    
+    .right1{
+    tab-size: 25px;
+    }
+    
+    .nav-link a:hover {
+    background-color: black;
+    color: #ddd;
+    letter-spacing: 4px;
+    transition: .4s ease-in-out;
+    }
+
+/* --------------------- nav bar finished here ---------------------------- */
