@@ -1,0 +1,119 @@
+*{   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 10px;
+    font-family: 'Montserrat';
+}
+
+body{
+
+    /*background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */
+    /* height: 100%; */
+    width: 100%;
+    background-color: #F7F2F2;
+    background-size:auto;
+    background-repeat: no-repeat;
+
+}
+
+.nav-link {
+    background-color: #151515;
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 8vh;
+    z-index: 2;
+    }
+    
+    
+    .nav-link a {
+    float: right;
+    color: #f2f2f2;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: .4s ease-in-out;
+    height: 8vh;
+    }
+    
+    .right1{
+    tab-size: 25px;
+    }
+    
+    .nav-link a:hover {
+    background-color: black;
+    color: #ddd;
+    letter-spacing: 4px;
+    transition: .4s ease-in-out;
+    }
+        
+
+/* .row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    transform: translate(0,350px);  /* for the position of the boxes */
+   
+} */
+
+/* .box2{
+    background-color: #ddd;
+    width: 280px;
+    height: 280px;
+    float: left;
+    margin: 0px 50px 0px 50px;
+    text-align: center;
+    /* border: 1px solid black; */
+    border-radius:50%;
+    border-width: 1.5px;
+    box-shadow: 0.2rem 0.5rem 1rem 0.2rem  #110f0f;
+    /* box-shadow: #231F20; */
+} */
+
+
+.group{
+    top: 7vh;
+    align-items: center;
+}
+
+img{
+    border-radius: 50%;
+ border-width: 1.5px;
+ box-shadow: 0.2rem 0.5rem 1rem 0.2rem  #110f0f;
+}
+
+.text{
+    font-size: 2rem;
+ color: #151515;
+ 
+}
+
+#section-two .container {
+    margin: 3em auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+#section-three .container {
+    margin: 3em auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
