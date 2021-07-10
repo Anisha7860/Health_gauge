@@ -37,19 +37,19 @@ def BMIcalculate(weight, height):
     height = height*0.01
     height = height*height
     BMI = weight/height
-    print(BMI)
+    BMI =  round(BMI, 2)
     if BMI <= 17:
         return "Severe Thinnees"
     elif BMI > 17 and BMI <= 18.5:
-        return "Moderate Thinnes Thinnees"
+        return "Moderate Thinnees",BMI
     elif BMI > 18.5 and BMI <= 25:
-        return "Normal"
+        return "Normal",BMI
     elif BMI > 25 and BMI <= 30:
-        return "Overweight"
+        return "Overweight",BMI
     elif BMI > 30 and BMI <= 35:
-        return "Obese class 1"
+        return "Obese class 1",BMI
     else:
-        return "Obese class 2"
+        return "Obese class 2",BMI
 
 
 @app.route('/HomePage')
@@ -98,8 +98,19 @@ def physicalHealthpage():
     else:
         height = int(request.form['height'])
         weight = int(request.form['weight'])
-        weightClass = BMIcalculate(weight, height)
-        return weightClass
+        weightClass,BMI = BMIcalculate(weight, height)
+        if weightClass == "Severe Thinnees":
+            return render_template("PhyHealthrecommendation.html", excercise_heading = "The Workout Plan All Skinny Guys Have Been Waiting For", excercise_link = "https://www.menshealth.com/fitness/a19540601/skinny-man-transformation-plan/",deit_heading = "The Skinny Guy’s Guide: Eating To Gain Muscle",deit_link = "https://breakingmuscle.com/healthy-eating/the-skinny-guy-s-guide-eating-to-gain-muscle",weight_class = weightClass, BMI = BMI)
+        elif weightClass == "Moderate Thinnees":
+            return render_template("PhyHealthrecommendation.html", excercise_heading = "How to Gain Weight Fast and Safely", excercise_link = "https://www.healthline.com/nutrition/how-to-gain-weight",deit_heading = "Underweight? see How to Add weight healthfully",deit_link = "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/underweight/faq-20058429",weight_class = weightClass, BMI = BMI)
+        elif weightClass == "Normal":
+            return render_template("PhyHealthrecommendation.html", excercise_heading = "The 7 Best Exercises for a Full-Body Workout", excercise_link = "https://www.active.com/fitness/articles/the-7-best-exercises-for-a-full-body-workout",deit_heading = "How to Maintain Weight",deit_link = "https://www.openfit.com/how-to-maintain-weight",weight_class = weightClass, BMI = BMI)
+        elif weightClass == "Overweight":
+            return render_template("PhyHealthrecommendation.html", excercise_heading = "The 8 Best Exercises for Weight Loss", excercise_link = "https://www.healthline.com/nutrition/best-exercise-for-weight-loss#TOC_TITLE_HDR_3",deit_heading = "Best Indian Diet Plan for Weight Loss",deit_link = "https://www.healthifyme.com/blog/best-indian-diet-plan-weight-loss/",weight_class = weightClass, BMI = BMI)
+        elif weightClass == "Obese class 1":
+            return render_template("PhyHealthrecommendation.html", excercise_heading = "Morbidly Obese: Tips for Losing 100 Pounds or More", excercise_link = "https://www.onhealth.com/content/1/morbidly_obese_tips_for_losing_100_pounds_or_more",deit_heading = "Obesity Diet: What To Eat And Avoid To Manage Obesity",deit_link = "https://food.ndtv.com/food-drinks/obesity-diet-what-to-eat-and-avoid-to-manage-obesity-181546",weight_class = weightClass, BMI = BMI)
+        else:
+            return render_template("PhyHealthrecommendation.html", excercise_heading = "How Sedentary Obese People Can Ease Into Regular Exercise", excercise_link = "https://www.healthline.com/health/fitness-exercise/exercise-for-obese-people",deit_heading = "Morbidly Obese Weight Loss Plan Without Surgery",deit_link = "https://flabfix.com/morbidly-obese-weight-loss-plan-without-surgery/",weight_class = weightClass, BMI = BMI)     
 
 @app.route("/MentalHealthBooks",methods = ["GET","POST"])
 def MentalHealthBooks():

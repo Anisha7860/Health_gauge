@@ -25,11 +25,11 @@
 
 
 <div class="hero1">
-    <p> Heading one </p>
+    <p> YOU ARE {{weight_class}} </p>
 </div>
 
 <div class="hero2">
-    <p>heading 2</p>
+    <p>your BMI is:{{BMI}}</p>
 </div>
 
 <div id="about" style="padding-top:20px">
@@ -41,8 +41,8 @@
             </a>
            </div>
            <div class="info-box">
-               <h1 class="hero">Let's Start Exercising !</h1>
-               <p>Regular physical activity can improve your muscle strength and boost your endurance.Exercise delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores.<br>You may also feel better about your appearance and yourself when you exercise regularly, which can boost your confidence and improve your self-esteem.</p>
+               <h1 class="hero">{{excercise_heading}}</h1>
+               <p>{{excercise_link}}</p>
            </div>
        </div>
    </section>
@@ -53,14 +53,13 @@
    <section id="section-three">
       <div class="container">
           <div class="info-box">
-            <a href="{{url_for('Meditations')}}"> 
+            <a href="#"> 
               <img src="../static/images/diet.jpeg" alt="image2" />
             </a>
           </div>
           <div class="info-box">
-              <h1 class="hero">Plan a Proper Diet!</h1>
-              <p>A balanced diet supplies the nutrients your body needs to work effectively. Without balanced nutrition, your body is more prone to disease, infection, fatigue, and low performance.<br>Your body gets the right nutrition when you consume a wide variety of food rich in calories such as fresh fruits and vegetables, whole grains, and proteins.
-              </p>
+              <h1 class="hero">{{deit_heading}}</h1>
+              <p>{{deit_link}}</p>  
           </div>
       </div>
   </section>
