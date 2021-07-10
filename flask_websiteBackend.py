@@ -84,13 +84,29 @@ def Recomendation():
     model = pickle.load(open('finalized_model', 'rb'))
     print("hereeee")
     prediction = model.predict([[Age, Gender, family_history, benefits, care_options, anonymity, leave, work_interfere, age_range, coworkers]])
-    print("fddddddddddddddddddddddddddddddddddddd")
-    print(prediction)
-    return "recomends"
+    print(prediction[0])
+    if prediction[0] == 0:
+        return "YOU ARE MENTALLY FIT!! CONGRATS"
+        #render_template("MentalHeslthRecomend.html", mental_status = "YOU ARE MENTALLY FIT!! CONGRATS")
+    else:
+        return "You dont seem to be mentally fit "
+        #render_template("MentalHeslthRecomend.html", mental_status = "You dont seem to be mentally fit ")
+    
 
-@app.route("/PhysicalHealth")
+@app.route("/PhysicalHealth",methods = ["GET","POST"])
 def physicalHealthpage():
-    return render_template("physical.html")
+    if (request.method == "GET"):
+        return render_template("physical.html")
+    else:
+        height = int(request.form['height'])
+        weight = int(request.form['weight'])
+        weightClass = BMIcalculate(weight, height)
+        return weightClass
+
+@app.route("/LandingPage",methods = ["GET","POST"])
+def Landingpage():
+    return "landing page"
+
 
 if __name__ == "__main__":
     app.run(debug = True)

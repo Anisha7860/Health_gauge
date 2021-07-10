@@ -15,23 +15,23 @@
         <div class="nav-link">
             <a href="#link1">Contact Us</a>
             <a href="#link2">Games</a> 
-            <a href="#link3">Books</a>
+            <a href="{{ url_for('Landingpage')}}">Landing Page</a>
             <a style="float:left;" class="right1" href="../templates/index.html">Health Gauge</a>
         </div>
     </header>
 
 
-<form action="#" method="post" id="survey-form">
+<form action="{{ url_for('physicalHealthpage')}}" method="post" id="survey-form">
     <h1>Don't Hold Back! Let's calculate your BMI (Body Mass Index):</h1>
     <br><br>
         <!-- <label for="Age">Enter your Age: <br></label>       
              <input type ="text" name="label_age" class="form-control" id="Age">
              <br><br> -->
         <label for="height">Enter your height in cms: <br></label>       
-             <input type="text" name="label_height" class="form-control" id="Age">
+             <input type="text" name="height" class="form-control" id="Age">
              <br><br>
         <label for="weight">Enter your weight in kgs: <br></label>       
-             <input type="text" name="label_weight" class="form-control" id="Age">
+             <input type="text" name="weight" class="form-control" id="Age">
             <br><br><br>
        
          <button id="submit" type="submit"> Submit</button>
