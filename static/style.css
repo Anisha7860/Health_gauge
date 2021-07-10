@@ -111,14 +111,11 @@ img{
  color: #151515;
  
 }
-.block{
-    color: #151515;
-    top: 3vh;
-    padding-top: 3vh;
-}
+
 
 #survey-form{
     text-align: left;
+    top: 3vh;
     text-decoration: burlywood;
     font-size: large;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
