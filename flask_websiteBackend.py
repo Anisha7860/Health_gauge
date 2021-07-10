@@ -86,11 +86,9 @@ def Recomendation():
     prediction = model.predict([[Age, Gender, family_history, benefits, care_options, anonymity, leave, work_interfere, age_range, coworkers]])
     print(prediction[0])
     if prediction[0] == 0:
-        return "YOU ARE MENTALLY FIT!! CONGRATS"
-        #render_template("MentalHeslthRecomend.html", mental_status = "YOU ARE MENTALLY FIT!! CONGRATS")
+        return render_template("MentalHeslthRecomend.html", mental_status = "YOU ARE MENTALLY FIT!! CONGRATS",heading = "Here are some strategy that'll help you maintain a good Mental Health:")
     else:
-        return "You dont seem to be mentally fit "
-        #render_template("MentalHeslthRecomend.html", mental_status = "You dont seem to be mentally fit ")
+        return render_template("MentalHeslthRecomend.html", mental_status = "You dont seem to be mentally fit ",heading = "Here are some strategy that'll help you out:")
     
 
 @app.route("/PhysicalHealth",methods = ["GET","POST"])
@@ -103,9 +101,21 @@ def physicalHealthpage():
         weightClass = BMIcalculate(weight, height)
         return weightClass
 
+@app.route("/MentalHealthBooks",methods = ["GET","POST"])
+def MentalHealthBooks():
+    return "books"
+
+
+@app.route("/Meditations",methods = ["GET","POST"])
+def Meditations():
+    return "meditations"
+
+
 @app.route("/LandingPage",methods = ["GET","POST"])
 def Landingpage():
     return "landing page"
+
+
 
 
 if __name__ == "__main__":
