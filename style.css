@@ -111,5 +111,11 @@ img{
  color: #151515;
  
 }
+.block{
+    color: #151515;
+    top: 3vh;
+    padding-top: 3vh;
+    /* padding-left: -50vh; */
+}
 
 
