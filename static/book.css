@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
 *{   margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,6 +52,37 @@ body{
     }
 
 /* --------------------- nav bar finished here ---------------------------- */
-.book{
-    margin-top: 50px;
+
+h1 {
+    padding-top: 70px;
+    text-align: center;
+    font-size: 5em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 40px;
+    height: 550px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #7aa8b7;
+    border-radius: 6px;
+    outline: none;
 }

@@ -52,29 +52,37 @@ body{
 
 #view{
     text-align: center;
-    color: navy;
-    margin: 15px 5px 15px 5px;
-    padding: 10px 5px 10px 5px;
+    margin-top: 70px;
+    
   }
 
   .col{
-    background-color: #CDD8D8;
-    width: 300px;
-    height: 240px;
+    background-color: #F7F2F2;
+    width: 303px;
+    height: 280px;
     float: left;
     margin: 30px;
     text-align: center;
-    border: 1px solid black;
     box-sizing: border-box;
   }
 
   .row{
     display: flex;
     justify-content: center;
-   /* align-content: center; */
     height: 300px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center; 
   }
 
-  p{
-      font-size: 10px;
+  .tt{
+      font-size: 15px;
+      color: #151515;
+      padding-top: 10px;
+  }
+  
+  h2{
+      color: rgb(3, 3, 92);
+      margin-top: 40px;
+      font-size: 25px;
   }
