@@ -114,7 +114,7 @@ def physicalHealthpage():
 
 @app.route("/MentalHealthBooks",methods = ["GET","POST"])
 def MentalHealthBooks():
-    return "books"
+    return render_template("book.html")
 
 
 @app.route("/Meditations",methods = ["GET","POST"])
@@ -124,7 +124,7 @@ def Meditations():
 
 @app.route("/LandingPage",methods = ["GET","POST"])
 def Landingpage():
-    return "landing page"
+    return render_template("crawler.html")
 
 
 
