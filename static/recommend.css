@@ -136,3 +136,12 @@ img{
     line-height: 1.2em;
     text-align: center;
 }
+
+.small{
+ color: rgb(94, 93, 93);
+line-height: 1.5em;
+content:attr(type);
+ display:block;
+margin:28px 0 0;
+font-size:12px;
+}
