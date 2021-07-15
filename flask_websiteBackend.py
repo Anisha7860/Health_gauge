@@ -1,7 +1,8 @@
 from flask import Flask,request
 from flask import render_template
 import pickle
-import sklearn
+
+from sklearn.ensemble import RandomForestClassifier
 
 app = Flask(__name__)
 Genderl = ['female', 'male', 'trans']
@@ -39,7 +40,7 @@ def BMIcalculate(weight, height):
     BMI = weight/height
     BMI =  round(BMI, 2)
     if BMI <= 17:
-        return "Severe Thinnees"
+        return "Severe Thinnees",BMI
     elif BMI > 17 and BMI <= 18.5:
         return "Moderate Thinnees",BMI
     elif BMI > 18.5 and BMI <= 25:
@@ -119,7 +120,7 @@ def MentalHealthBooks():
 
 @app.route("/Meditations",methods = ["GET","POST"])
 def Meditations():
-    return "meditations"
+    return render_template("videos.html")
 
 
 @app.route("/LandingPage",methods = ["GET","POST"])

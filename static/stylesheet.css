@@ -9,7 +9,7 @@ body {
     margin: 0;
     min-height: 100vh;
     background-image: linear-gradient(45deg, #2e2bcf, #b2f3dd, #ffffff, #eedd44);
-    ;
+
 }
 
 .content {
@@ -27,15 +27,17 @@ body {
     font size: 0.2em;
     font-weight: 900;
     margin-left: 220px;
+    
 }
 
 h1 {
     font-size: 6em;
+    padding-top: 80px;
     color: #333;
     line-height: 1.4em;
     font-weight: 500;
-    font-family: 'Fugaz One', cursive;
     text-align: center;
+    font-family: 'Montserrat';
 }
 
 .content .textbox {
@@ -53,7 +55,7 @@ h1 {
     line-height: 0.4em;
     font-weight: 900;
     text-align: center;
-    font-family: 'Jomhuria', cursive;
+    font-family:'Times New Roman', Times, serif, cursive;
     padding: 0px, 0px, 0px, 0px;
 }
 
@@ -82,7 +84,7 @@ p {
     display: flex;
     justify-content: flex-end;
     padding-right: 100px;
-    margin-top: 35px;
+    margin-top: 2px;
 }
 
 {

@@ -25,11 +25,11 @@
 
 
 <div class="hero1">
-    <p> YOU ARE <a href="{{weight_class}}"></a>  </p>     
+    <p> YOU ARE {{weight_class}}</p>     
 </div>
 
 <div class="hero2">
-    <p>your BMI <a href=" {{BMI}}"></a>  </p>     
+    <p>your BMI {{BMI}} </p>     
 </div>
 
 <div id="about" style="padding-top:20px">
@@ -42,7 +42,9 @@
            </div>
            <div class="info-box">
                <h1 class="hero">{{excercise_heading}}</h1>
-               <p><a href="{{excercise_link}}">Exercise Link</a></p>
+               <br><a href="#">Article Link</a>
+               <a href="{{excercise_link}}">{{excercise_link}}</a>
+               
                <p>Regular physical activity can improve your muscle strength and boost your endurance.
                 Exercise delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores.<br>You may also feel better about your appearance and yourself when you exercise regularly, which can boost your confidence and improve your self-esteem.</p>
            </div>
@@ -55,15 +57,16 @@
    <section id="section-three">
       <div class="container">
           <div class="info-box">
-            <a href="#"> 
+            <a href="{{url_for('Meditations')}}"> 
               <img src="../static/images/diet.jpeg" alt="image2" />
             </a>
           </div>
           <div class="info-box">
               <h1 class="hero">{{deit_heading}}</h1>
               <!-- <p>{{deit_link}}</p>   -->
-              <a href="{{deit_link}}">Mental Health Emergencies: A Guide to Recognizing and Handling Mental Health Crises</a>
               <br><a href="#">Article Link</a>
+              <a href="{{deit_link}}">{{deit_link}}</a>
+              
               <p>A balanced diet supplies the nutrients your body needs to work effectively. Without balanced nutrition, your body is more prone to disease, infection, fatigue, and low performance.<br>Your body gets the right nutrition when you consume a wide variety of food rich in calories such as fresh fruits and vegetables, whole grains, and proteins.</p>
           </div>
       </div>
